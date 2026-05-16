@@ -22,25 +22,35 @@
 <body>
     <!-- page header -->
     <header>
-        <a href="index.html" class="logo-group">
-            <img src="images/logo.png" alt="site logo" width="100" height="91">
-            <div>
-                <h1>Budget Vacations</h1>
-                <p>Discover affordable travel destinations</p>
-            </div>
-        </a>
-    </header>
+        <div class="header-inner">
+            <a href="index.html" class="logo-group">
+                <img src="images/logo.png" alt="Budget Vacations Home">
+                <span class="wordmark">Budget Vacations</span>
+                <!-- <div>
+                    <h1>Budget Vacations</h1>
+                    <p>Discover affordable travel destinations</p>
+                </div> -->
+            </a>
 
-    <!-- page navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="video.html">Explore</a></li>
-            <li class="active"><a href="packages.html">Packages</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <!-- button -->
+            <button class="hamburger" id="menu-btn" aria-label="Open Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+
+        <!-- page navigation -->
+            <nav>
+                <ul id="primary-nav">
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="video.html">Guides</a></li>
+                    <li class="active"><a href="packages.html">Packages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- page main -->
     <main>
@@ -53,7 +63,7 @@
                         <p>Enjoy the tropical breeze, golden beaches, and sunset luaus in beautiful Maui, Hawaii. Perfect for couples and small families.</p>
                         <p><strong>Hotel: </strong><a href="https://www.hyatt.com/en-US/hotel/hawaii/hyatt-regency-maui-resort-and-spa/oggrm" target="_blank">Hyatt Regency Maui</a></p>
                         <p><strong>Rental Car:</strong> Jeep Wrangler from <a href="https://www.enterprise.com/" target="_blank">Enterprise</a></p>
-                        <p class="cost">Cost: $2,300 USD (5 days, 2 adults)</p>
+                        <p><strong>Cost:</strong> $2,300 USD (5 days, 2 adults)</p>
                     </div>
             </div>
         </div>
@@ -66,7 +76,7 @@
                     <p>Zip-line through the jungle, soak in natural hot springs, and visit lush waterfalls in this eco-friendly vacation.</p>
                     <p><strong>Hotel: </strong><a href="https://www.tabacon.com/" target="_blank">Tabacón Thermal Resort & Spa</a></p>
                     <p><strong>Rental Car:</strong> 4x4 SUV from <a href="https://www.alamo.com/" target="_blank">Alamo</a></p>
-                    <p class="cost">Cost: $1,900 USD (5 days, 2 adults)</p>
+                    <p><strong>Cost:</strong> $1,900 USD (5 days, 2 adults)</p>
                 </div>
             </div>
         </div>
@@ -79,7 +89,7 @@
                     <p>Chase the Northern Lights, relax in geothermal lagoons, and drive the famous Ring Road in scenic Iceland.</p>
                     <p><strong>Hotel:</strong> <a href="https://www.centerhotels.com/" target="_blank">Center Hotels Reykjavik</a></p>
                     <p><strong>Rental Car:</strong> AWD Wagon from <a href="https://www.hertz.com/" target="_blank">Hertz</a></p>
-                    <p class="cost">Cost: $2,800 USD (6 days, 2 adults)</p>
+                    <p><strong>Cost:</strong> $2,800 USD (6 days, 2 adults)</p>
                 </div>
             </div>
         </div>
@@ -89,7 +99,18 @@
     <!-- page footer -->
     <footer>
         <p>&copy; 2025 &bull; Madison Lamb &bull; Web Essentials</p>
-    </footer> 
+    </footer>
+    
+    <!-- JavaScript for button -->
+    <script>
+    const menuToggle = document.getElementById('menu-btn');
+    const primaryNav = document.getElementById('primary-nav');
+
+    menuToggle.addEventListener('click', () => {
+        primaryNav.classList.toggle('open');
+        menuToggle.classList.toggle('active');
+    });
+    </script> 
     
 </body>
 </html>
